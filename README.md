@@ -36,7 +36,7 @@ Below are the visual results for the three imputation techniques:
   
 - **Median Imputation** produced a similar result with a PSNR of ~6.924 and SSIM of ~0.073. The similarity in outcomes suggests minimal deviation between mean and median values across columns in this image.
 
-- **Mode Imputation** performed slightly worse, with a PSNR of ~6.371 and SSIM of ~0.062. The imputed image displays noticeable "spotting" or white holes, likely due to blank spaces in those columns and the dense black area in the center.
+- **Mode Imputation** performed slightly worse, with a PSNR of ~6.371 and SSIM of ~0.062. The imputed image displays noticeable "spotting" or white holes, likely due to blank spaces in those columns and the dense black area (the eye) in the center.
 
 ### PCA Imputation
 
