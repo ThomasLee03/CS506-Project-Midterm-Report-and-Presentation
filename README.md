@@ -28,9 +28,9 @@ For each corrupted pixel, I replaced missing values based on the specified avera
 
 Below are the visual results for the three imputation techniques:
 
-![Mean Imputed Image](imageDisplay/ImageRecoveredbyMean.jpg)
-![Median Imputed Image](imageDisplay/ImageRecoveredbyMedian.jpg)
-![Mode Imputed Image](imageDisplay/ImageRecoveredbyMode.jpg)
+![Mean Imputed Image](imageDisplay/ImageRecoveredbyMean.png)
+![Median Imputed Image](imageDisplay/ImageRecoveredbyMedian.png)
+![Mode Imputed Image](imageDisplay/ImageRecoveredbyMode.png)
 
 - **Mean Imputation** yielded a PSNR of approximately 7.075 and an SSIM of 0.074. These values are low, suggesting poor fidelity and structural similarity with the original image. The resulting image looks patchy, indicating limited recovery quality.
   
