@@ -63,10 +63,9 @@ Lastly, I applied Total Variation (TV) inpainting, which aims to minimize intens
 
 ![TV Inpainting Image](imageDisplay/ImageRecoveredbyTV.png)
 
-TV inpainting produced a nearly indistinguishable image from the original, with an SSIM of ~34.141, significantly outperforming the other methods. However, the PSNR was surprisingly low at ~0.096. This discrepancy can be attributed to:
+TV inpainting produced a nearly indistinguishable image from the original, with an PSNR of ~34.141, significantly outperforming the other methods. However, the SSIM was surprisingly low at ~0.096. This discrepancy can be attributed to:
 - **Structural Sensitivity of SSIM**: SSIM is sensitive to small structural changes, and TV inpainting may smooth fine details or introduce minor edge shifts that affect the SSIM value.
 - **Luminance and Contrast Differences**: TV inpainting might slightly adjust intensity and contrast levels, which can reduce SSIM, even if the overall image is visually similar.
-- **Parameter Sensitivity**: TV inpainting parameters (e.g., regularization strength) significantly influence results. Over-smoothing could reduce SSIM despite good visual similarity.
 
 ## Future Directions
 
