@@ -1,4 +1,4 @@
-# Link to project presentation:
+# Link to project presentation video:
 
 https://www.awesomescreenshot.com/video/33205243?key=4d0521e571180edc44133689840d63e3
 
