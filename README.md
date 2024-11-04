@@ -1,3 +1,7 @@
+# Link to project presentation:
+
+https://www.awesomescreenshot.com/video/33205243?key=4d0521e571180edc44133689840d63e3
+
 # Project Report: Evaluating Imputation Techniques for Image Restoration
 
 In this project, I initially aimed to use the CIFAR-10 dataset to test various imputation techniques on corrupted images. However, CIFAR-10’s 32x32 resolution proved insufficient for visually assessing the restoration quality due to its low resolution. To facilitate more effective visual evaluations, I chose a higher-resolution dataset featuring images of Pokémon, with resolutions ranging between 280x210 and 400x400 pixels. This resolution provided the necessary detail to better analyze the imputation methods.
@@ -90,6 +94,3 @@ To improve user interaction, I also aim to enhance my application’s functional
 - [Robust Principal Component Analysis](https://arxiv.org/pdf/0912.3599)
 - [WaveFill: A Wavelet-based Generation Network for Image Inpainting](https://arxiv.org/pdf/2107.11027)
 - [Understanding Image Quality Assessment Metrics: CR, PSNR, and SSIM](https://medium.com/@jradzik4/understanding-image-quality-assessment-metrics-cr-psnr-and-ssim-76ffa82d81ff)
-
-
-https://www.awesomescreenshot.com/video/33205243?key=4d0521e571180edc44133689840d63e3
