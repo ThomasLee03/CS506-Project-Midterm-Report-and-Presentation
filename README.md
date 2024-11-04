@@ -28,7 +28,7 @@ I applied various imputation techniques, including mean, median, mode, PCA, and 
 
 ### Mean, Median, and Mode Imputation Techniques
 
-For each corrupted pixel, I replaced missing values based on the specified averaging technique (mean, median, or mode) calculated from the column values. Although I initially considered using the K-nearest neighbors for more contextual imputation, this approach was computationally prohibitive.
+For each corrupted pixel, I replaced missing values based on the specified averaging technique (mean, median, or mode) calculated from the column values. Although I initially considered using a KNN variation, where I choose the nearest k pixels of the corrupted pixel to imputate the corrupted pixels, however this approach was computationally prohibitive.
 
 Below are the visual results for the three imputation techniques:
 
