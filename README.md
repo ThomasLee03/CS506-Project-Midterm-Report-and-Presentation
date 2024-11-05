@@ -71,6 +71,20 @@ TV inpainting produced a nearly indistinguishable image from the original, with 
 - **Structural Sensitivity of SSIM**: SSIM is sensitive to small structural changes, and TV inpainting may smooth fine details or introduce minor edge shifts that affect the SSIM value.
 - **Luminance and Contrast Differences**: TV inpainting might slightly adjust intensity and contrast levels, which can reduce SSIM, even if the overall image is visually similar.
 
+### Testing on Real Images
+
+I hypothesized that many of the artifacts such as rainbow scattering and the white and black spots are attributed to unrealistic images, so I decieded to test the different imputation techniques on some more realistic images. For an example, I chose an image of a cat
+
+![Cat Original Image](imageDisplay/CAToriginalImage.jpg)
+
+With the corrupted the image to be:
+
+![Cat Corrupted Image](imageDisplay/CATcorruptedImage.jpg)
+
+While testing mean, median, and mode imputation, I noticed that although we visually do not see better performance, the SSIM and PSNR values rose significantly.
+
+![Cat Mean Imputation Image](imageDisplay/CATImageRecoveredbyMean.jpg)
+
 ## Future Directions
 
 Moving forward, I plan to explore additional approaches and techniques:
@@ -83,8 +97,6 @@ Moving forward, I plan to explore additional approaches and techniques:
 - **Convolutional Autoencoders**: Using a pre-trained or custom-trained convolutional autoencoder to impute missing pixels could benefit complex patterns, learning image-specific features that improve imputation accuracy.
 
 Each of these techniques could provide unique advantages in handling specific types of corruption or structures within images. My goal is to evaluate and compare these methods in terms of both visual quality and quantitative metrics like PSNR and SSIM to identify the most effective imputation strategies for image restoration.
-
-In addition, I plan to experiment with more realistic images, as these typically lack the large blank spaces present in my current dataset. This adjustment could minimize artifacts such as rainbow scattering or white spots, which are more prominent in images with empty backgrounds.
 
 To improve user interaction, I also aim to enhance my application’s functionality by allowing clients to manually select regions they wish to mark as "corrupted." This feature would give users control over which areas they want to visualize as restored. For instance, a user could select a lamppost in an image as the corrupted area and observe how Total Variation (TV) inpainting or other methods attempt to “remove” or restore that region.
 
