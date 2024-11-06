@@ -81,9 +81,39 @@ With the corrupted the image to be:
 
 ![Cat Corrupted Image](imageDisplay/CATcorruptedImage.jpg)
 
-While testing mean, median, and mode imputation, I noticed that although we visually do not see better performance, the SSIM and PSNR values rose significantly.
+While testing mean, median, and mode imputation, I noticed that although we visually do not see much better performance, the SSIM and PSNR values rose significantly.
 
 ![Cat Mean Imputation Image](imageDisplay/CATImageRecoveredbyMean.jpg)
+
+This is mean imputation, where we observed a SSIM and PSNR value of ~19.302 and an PSNR value of ~0.408. 
+
+![Cat Median Imputation Image](imageDisplay/CATImageRecoveredbyMedian.jpg)
+
+This is the median imputation, and here we begin to observe different results from the mean imputation technique. Here, we acquired an SSIM value of ~0.442 and a PSNR value of ~18.906. 
+
+![Cat Mode Imputation Image](imageDisplay/CATImageRecoveredbyMode.jpg)
+
+The mode imputation, however seems to be doing just as worse as it was with the unrealistic photos (relative to the other two imputated images). Testing on realistic images has led me to see that my hypothesis of the utilizing realistic images to minimize the visual artifacts (such as white splots) was false. 
+
+Although it did not reduce the white spots, we see visually much better performance with PCA imputation. 
+
+![Cat PCA imputation Image](imageDisplay/CatCATBestSSIM_0.933466871475943.jpg)
+
+I calculated the SSIM to be ~33.030 and the SSIM value to be 0.932, which is considerably better than what we found for the unrealistic image. Here, we noticed much less rainbow scattering, with it only occuring in areas close to white. This observation soldified that rainbow scattering happens in areas close to (255, 255, 255). However a new artifact displayed in the left side (the red splotch). My guess is that it is SVD's tendency to reproduce dominant colors and structures across the image during reconstruction. Since the nose in the middle is the only object that is red, it might be considered a key pattern in the image. 
+
+What was interesting was that the distribution of the relationship between the metrics (PSNR and SSIM) and rank changed.
+
+![PSNR vs. Rank Image](imageDisplay/PSNR_vs_Rank.jpg)
+
+![SSIM vs. Rank Image](imageDisplay/SSIM_vs_Rank.jpg)
+
+We see that it doesn't necessarily follow a parabolic curve, but rather a unique distribution. It was particularly interesting that the max for both distributions resulted in a rank of 21 as well. 
+
+Total variation in painting, as expected, did the best.
+
+![Cat from TV Image](imageDisplay/CATImageRecoveredbyTV.jpg)
+
+The PSNR was as expected (~41.802), however it was very interesting to note that the SSIM value was ~0.984, My guess is that since we don't have such harsh changes in the pixel values (like the white background or solid colors without blending based on light), we see considerable performance. 
 
 ## Future Directions
 
